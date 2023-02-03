@@ -1,5 +1,5 @@
-package ex1;
-
-public enum RoleType {
-  GUEST, USER, ADMIN
-}
+//package ex1;
+//
+//public enum RoleType {
+//  GUEST, USER, ADMIN
+//}
