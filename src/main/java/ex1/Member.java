@@ -43,6 +43,12 @@ public class Member {
     this.team = team;
   }
 
+  public void changeTeam(Team team) {
+    this.team = team;
+    team.getMembers().add(this);
+    //연관관계 편의 메소드
+  }
+
   @Enumerated(EnumType.STRING)
 //  @Enumerated(EnumType.ORDINAL)
 //  ORDINAL로 하면 엄청나게 어려운 버그가 생김 (enum이 앞에 추가 될 경우 다른 값인데 0, 0 이 들어가는 경우)

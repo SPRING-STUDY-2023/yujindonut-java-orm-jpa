@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f23ce4d-eb93-40b4-9ba5-5b8e927f43a6" name="변경" comment="# &lt;type&gt;: &lt;subject&gt;&#10;##### Subject 50 characters ################# -&gt; |&#10;&#10;&#10;# Body Message&#10;######## Body 72 characters ####################################### -&gt; |&#10;&#10;# Issue Tracker Number or URL&#10;&#10;# --- COMMIT END ---&#10;# Type can be&#10;#   feat    : new feature&#10;#   fix     : bug fix&#10;#   refactor: refactoring production code&#10;#   style   : formatting, missing semi colons, etc; no code change&#10;#   docs    : changes to documentation&#10;#   test    : adding or refactoring tests&#10;#             no productin code change&#10;#   chore   : updating grunt tasks etc&#10;#             no production code change&#10;# ------------------&#10;# Remember me ~&#10;#   Capitalize the subject line&#10;#     제목줄은 대문자로 시작한다.&#10;#   Use the imperative mood in the subject line&#10;#     제목줄은 명령어로 작성한다.&#10;#   Do not end the subject line with a period&#10;#     제목줄은 마침표로 끝내지 않는다.&#10;#   Separate subject from body with a blank line&#10;#     본문과 제목에는 빈줄을 넣어서 구분한다.&#10;#   Use the body to explain what and why vs. how&#10;#     본문에는 &quot;어떻게&quot; 보다는 &quot;왜&quot;와 &quot;무엇을&quot; 설명한다.&#10;#   Can use multiple lines with &quot;-&quot; for bullet points in body&#10;#     본문에 목록을 나타낼때는 &quot;-&quot;로 시작한다.&#10;# ------------------">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ex1/JpaMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ex1/JpaMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ex1/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ex1/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ex1/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ex1/Team.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +82,7 @@
       <workItem from="1675300345889" duration="4660000" />
       <workItem from="1675320573644" duration="597000" />
       <workItem from="1675388749950" duration="2043000" />
+      <workItem from="1675391009405" duration="2456000" />
     </task>
     <task id="LOCAL-00001" summary="[INIT] 프로젝트 초기셋팅 설정">
       <created>1675233360315</created>
@@ -126,7 +126,21 @@
       <option name="project" value="LOCAL" />
       <updated>1675390642215</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="[FEAT] 단방향 연관관계 - ManyToOne">
+      <created>1675391047213</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1675391047213</updated>
+    </task>
+    <task id="LOCAL-00008" summary="[FEAT] 단방향 연관관계">
+      <created>1675391313179</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1675391313179</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,6 +164,8 @@
     <MESSAGE value="[FEAT] 기본키 매핑" />
     <MESSAGE value="[FEAT] Section 4 - 엔티티매핑&#10;Section 4 - 엔티티매핑을 듣고 정리합니다." />
     <MESSAGE value="[FEAT] 객체지향적이지 않은 설계 예시" />
-    <option name="LAST_COMMIT_MESSAGE" value="[FEAT] 객체지향적이지 않은 설계 예시" />
+    <MESSAGE value="[FEAT] 단방향 연관관계 - ManyToOne" />
+    <MESSAGE value="[FEAT] 단방향 연관관계" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FEAT] 단방향 연관관계" />
   </component>
 </project>
