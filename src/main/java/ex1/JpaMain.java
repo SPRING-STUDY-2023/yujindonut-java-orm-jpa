@@ -24,14 +24,20 @@ public class JpaMain {
 
       Member member = new Member();
       member.setUsername("member1");
-      member.setTeamId(team.getId());
+//      member.setTeamId(team.getId());
+      member.setTeam(team);
       em.persist(member);
 
       // 객체지향적이지 않은 설계
       Member findMember = em.find(Member.class, member.getId());
-      Long findTeamId = findMember.getTeamId();
+//      Long findTeamId = findMember.getTeamId();
+
+      em.flush(); // 싱크 맞추고
+      em.clear(); // 영속성 컨텐츠 싹 비우기
+
       // 연관관계가 없음
-      Team findTeam = em.find(Team.class, team.getId());
+//      Team findTeam = em.find(Team.class, team.getId());
+      Team findTeam = findMember.getTeam();
 
       tx.commit();
     } catch (Exception e) {
