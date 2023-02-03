@@ -4,6 +4,8 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
+import jpaShop.domain.Order;
+import jpaShop.domain.OrderItem;
 
 public class Main {
 
@@ -17,28 +19,17 @@ public class Main {
     tx.begin();
 
     try {
-//       생성
-//      Member member = new Member();
-//      member.setId(1L);
-//      member.setName("한유진");
 
-//      여기까지 비영속 상태
-//      em.persist(member);
-//      영속상태가 됨. (DB에 저장이 되는 시점X)
+      // 양방향 설계
+      Order order = new Order();
+      em.persist(order);
 
-//      조회
-//      Member findMember = em.find(Member.class, 1L);
+//      개발상의 편의, 조회할때의 편의를 위해서 양방향 관계를 만드는 것
+//      order.addOrderItem(new OrderItem());
 
-//      삭제
-//      em.remove(findMember);
-//
-//      수정
-//      findMember.setName("김영한");
-//      실제 데이터베이스에 commit을 하지 않아도 수정이 된다.
-//      변경이 되었는지 transaction하는 시점에서 수정사항이 생기면 JPA가 업데이트 쿼리를 날린다.
-
-//      ENUM
-
+      OrderItem orderItem = new OrderItem();
+      orderItem.setOrder(order);
+      em.persist(orderItem);
 
       tx.commit();
     } catch (Exception e) {
