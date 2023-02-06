@@ -1,5 +1,7 @@
 package ex1;
 
+import java.util.ArrayList;
+import java.util.List;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -25,7 +27,17 @@ public class Member {
   @JoinColumn(name = "TEAM_ID")
   private Team team;
 
+  @OneToOne
+  @JoinColumn(name="LOCKER_ID")
+  private Locker locker;
   private Integer age;
+
+//  @ManyToMany
+//  @JoinTable(name = "MEMBER_PRODUCT")
+//  private List<Product> productList = new ArrayList<>();
+
+  @OneToMany(mappedBy = "member")
+  private List<MemberProduct> memberProducts = new ArrayList<>();
 
 //  public Long getTeamId() {
 //    return teamId;

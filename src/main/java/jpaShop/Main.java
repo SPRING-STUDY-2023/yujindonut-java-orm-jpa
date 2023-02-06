@@ -11,7 +11,7 @@ public class Main {
 
   public static void main(String[] args) {
     // 애플리케이션 로딩 시점에 딱 한번 생성되어 애플리케이션 전체에서 공유됨
-    EntityManagerFactory emf = Persistence.createEntityManagerFactory("hello");
+    EntityManagerFactory emf = Persistence.createEntityManagerFactory("Mapping");
 
     // Transaction 단위를 실행할때마다 EntityManager를 만들어줌 - 데이터베이스 커넥션 하나를 받아온것
     EntityManager em = emf.createEntityManager();
