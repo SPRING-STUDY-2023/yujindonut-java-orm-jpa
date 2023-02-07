@@ -11,7 +11,7 @@ import java.util.Date;
     name = "MEMBER_SEQ_GENERATOR",
     sequenceName = "MEMBER_SEQ", //매핑할 데이터베이스 시퀀스 이름
     initialValue = 1, allocationSize = 1)
-public class Member {
+public class Member extends BaseEntity {
   @Id @GeneratedValue(strategy = GenerationType.AUTO)
   @Column(name = "MEMBER_ID")
   private Long id;
@@ -65,10 +65,6 @@ public class Member {
 //  @Enumerated(EnumType.ORDINAL)
 //  ORDINAL로 하면 엄청나게 어려운 버그가 생김 (enum이 앞에 추가 될 경우 다른 값인데 0, 0 이 들어가는 경우)
   private RoleType roleType;
-  @Temporal(TemporalType.TIMESTAMP)
-  private Date createdDate;
-  @Temporal(TemporalType.TIMESTAMP)
-  private Date lastModifiedDate;
   @Lob
   private String description;
 
@@ -102,22 +98,6 @@ public class Member {
 
   public void setRoleType(RoleType roleType) {
     this.roleType = roleType;
-  }
-
-  public Date getCreatedDate() {
-    return createdDate;
-  }
-
-  public void setCreatedDate(Date createdDate) {
-    this.createdDate = createdDate;
-  }
-
-  public Date getLastModifiedDate() {
-    return lastModifiedDate;
-  }
-
-  public void setLastModifiedDate(Date lastModifiedDate) {
-    this.lastModifiedDate = lastModifiedDate;
   }
 
   public String getDescription() {
