@@ -5,6 +5,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
+import org.hibernate.Hibernate;
 
 public class JpaMain {
 
@@ -49,23 +50,44 @@ public class JpaMain {
 //      Team newTeam = em.find(Team.class, 100L);
 //      findMember.setTeam(newTeam);
 
-      Movie movie = new Movie();
+//      Movie movie = new Movie();
 //      movie.setId(1L);
-      movie.setName("바람과 함께 사라지다");
-      movie.setPrice(1111);
-      movie.setActor("HHH");
-      movie.setDirector("hhh");
+//      movie.setName("바람과 함께 사라지다");
+//      movie.setPrice(1111);
+//      movie.setActor("HHH");
+//      movie.setDirector("hhh");
 
-      em.persist(movie);
+//      em.persist(movie);
+//
+//      em.flush();
+//      em.clear();
+
+//      Movie findMovie = em.find(Movie.class, movie.getId());
+      // Item 과 inner join
+//      System.out.println("find Movie " + findMovie);
+
+      Member member1 = new Member();
+      member1.setUsername("HI");
+      em.persist(member1);
 
       em.flush();
       em.clear();
 
-      Movie findMovie = em.find(Movie.class, movie.getId());
-      // Item 과 inner join
-      System.out.println("find Movie " + findMovie);
+      Member refMember = em.getReference(Member.class, member1.getId());
+      System.out.println("refMember = " + refMember.getClass()); // Proxy
+      em.flush();
+//      em.detach(refMember);
+//      System.out.println("refMember = " + refMember.getUsername()); // LanyInitializationException오류
 
+      // 초기화 여부
+      System.out.println("isLoaded = " + emf.getPersistenceUnitUtil().isLoaded(refMember));
 
+      // 프록시 클래스 확인 방법
+      System.out.println(refMember.getClass());
+
+      // 프록시 강제 초기화
+      Hibernate.initialize(refMember);
+      // JPA - member.getName (select쿼리문 나감)
 
       tx.commit();
     } catch (Exception e) {
@@ -75,5 +97,17 @@ public class JpaMain {
     }
 
     emf.close();
+  }
+
+  private static void printMember(Member member) {
+    System.out.println("member = " + member.getUsername());
+  }
+
+  private static void printTeamAndMember(Member member) {
+    String username = member.getUsername();
+    System.out.println("username = " + username);
+
+    Team team = member.getTeam();
+    System.out.println("team = " + team.getName());
   }
 }
