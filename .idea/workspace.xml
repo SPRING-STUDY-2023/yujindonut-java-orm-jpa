@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f23ce4d-eb93-40b4-9ba5-5b8e927f43a6" name="변경" comment="[FEAT] 영속성 전이(Cascade)">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ex1/Parent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ex1/Parent.java" afterDir="false" />
+    <list default="true" id="9f23ce4d-eb93-40b4-9ba5-5b8e927f43a6" name="변경" comment="[FEAT] 고아객체">
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpaShop/domain/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpaShop/domain/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpaShop/domain/Delivery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpaShop/domain/Delivery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpaShop/domain/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpaShop/domain/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpaShop/domain/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpaShop/domain/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpaShop/domain/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpaShop/domain/Order.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +95,7 @@
       <workItem from="1675654805217" duration="3575000" />
       <workItem from="1675737352700" duration="5879000" />
       <workItem from="1675786280093" duration="145000" />
-      <workItem from="1675823333002" duration="3492000" />
+      <workItem from="1675823333002" duration="3629000" />
     </task>
     <task id="LOCAL-00001" summary="[INIT] 프로젝트 초기셋팅 설정">
       <created>1675233360315</created>
@@ -212,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675829474339</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="[FEAT] 고아객체">
+      <created>1675829959050</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1675829959050</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,6 +258,7 @@
     <MESSAGE value="[FEAT] 프록시" />
     <MESSAGE value="[FEAT] 즉시로딩과 지연로딩" />
     <MESSAGE value="[FEAT] 영속성 전이(Cascade)" />
-    <option name="LAST_COMMIT_MESSAGE" value="[FEAT] 영속성 전이(Cascade)" />
+    <MESSAGE value="[FEAT] 고아객체" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FEAT] 고아객체" />
   </component>
 </project>

@@ -5,6 +5,7 @@ import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.DiscriminatorColumn;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
@@ -24,7 +25,7 @@ public class Item extends Base {
   private int price;
   private int stockQuantity;
 
-  @ManyToMany(mappedBy = "items")
+  @ManyToMany(mappedBy = "items", fetch = FetchType.LAZY)
   private List<Category> categories = new ArrayList<>();
 
   public Long getId() {
