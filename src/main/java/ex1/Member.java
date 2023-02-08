@@ -22,7 +22,8 @@ public class Member extends BaseEntity {
 //  private Long teamId;
 
   // Member입장에서는 Many Team 입장에서는 One
-  @ManyToOne
+  @ManyToOne(fetch = FetchType.LAZY)
+
   // Join해야하는 컬럼이 뭐니
   @JoinColumn(name = "TEAM_ID")
   private Team team;

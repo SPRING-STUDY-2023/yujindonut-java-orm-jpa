@@ -66,28 +66,63 @@ public class JpaMain {
       // Item 과 inner join
 //      System.out.println("find Movie " + findMovie);
 
-      Member member1 = new Member();
-      member1.setUsername("HI");
-      em.persist(member1);
 
-      em.flush();
-      em.clear();
-
-      Member refMember = em.getReference(Member.class, member1.getId());
-      System.out.println("refMember = " + refMember.getClass()); // Proxy
-      em.flush();
+//      프록시
+//      Member member1 = new Member();
+//      member1.setUsername("HI");
+//      em.persist(member1);
+//
+//      em.flush();
+//      em.clear();
+//
+//      Member refMember = em.getReference(Member.class, member1.getId());
+//      System.out.println("refMember = " + refMember.getClass()); // Proxy
+//      em.flush();
 //      em.detach(refMember);
 //      System.out.println("refMember = " + refMember.getUsername()); // LanyInitializationException오류
 
       // 초기화 여부
-      System.out.println("isLoaded = " + emf.getPersistenceUnitUtil().isLoaded(refMember));
+//      System.out.println("isLoaded = " + emf.getPersistenceUnitUtil().isLoaded(refMember));
 
       // 프록시 클래스 확인 방법
-      System.out.println(refMember.getClass());
+//      System.out.println(refMember.getClass());
 
       // 프록시 강제 초기화
-      Hibernate.initialize(refMember);
+//      Hibernate.initialize(refMember);
       // JPA - member.getName (select쿼리문 나감)
+
+
+//      즉시 로딩과 지연로딩
+      Team team1 = new Team();
+      team1.setName("team1");
+      em.persist(team1);
+
+      Team team2 = new Team();
+      team2.setName("team2");
+      em.persist(team2);
+
+      Member member1 = new Member();
+      member1.setUsername("member1");
+      member1.setTeam(team1);
+      em.persist(member1);
+
+      Member member2 = new Member();
+      member2.setUsername("member2");
+      member2.setTeam(team2);
+      em.persist(member2);
+
+      em.flush();
+      em.clear();
+
+      Member m = em.find(Member.class, member1.getId());
+      System.out.println(m.getTeam().getClass());
+
+      System.out.println("-----");
+      // 팀을 터치하는 순간에 select 쿼리가 실행됨
+      m.getTeam().getName();
+      System.out.println("-----");
+
+      List<Member> members = em.createQuery("select m from Member m", Member.class).getResultList();
 
       tx.commit();
     } catch (Exception e) {
