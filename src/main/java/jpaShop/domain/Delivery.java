@@ -7,7 +7,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
 @Entity
-public class Delivery {
+public class Delivery extends Base {
 
   @Id @GeneratedValue
   private long id;

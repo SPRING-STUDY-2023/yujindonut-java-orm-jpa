@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
 @Entity
-public class Member {
+public class Member extends Base {
 
   @Id @GeneratedValue
   @Column(name = "MEMBER_ID")
