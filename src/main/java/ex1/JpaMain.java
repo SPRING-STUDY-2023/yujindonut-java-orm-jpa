@@ -1,9 +1,11 @@
 package ex1;
 
 import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
+import javax.persistence.OneToMany;
 import javax.persistence.Persistence;
 import org.hibernate.Hibernate;
 
@@ -93,36 +95,51 @@ public class JpaMain {
 
 
 //      즉시 로딩과 지연로딩
-      Team team1 = new Team();
-      team1.setName("team1");
-      em.persist(team1);
+//      Team team1 = new Team();
+//      team1.setName("team1");
+//      em.persist(team1);
+//
+//      Team team2 = new Team();
+//      team2.setName("team2");
+//      em.persist(team2);
+//
+//      Member member1 = new Member();
+//      member1.setUsername("member1");
+//      member1.setTeam(team1);
+//      em.persist(member1);
+//
+//      Member member2 = new Member();
+//      member2.setUsername("member2");
+//      member2.setTeam(team2);
+//      em.persist(member2);
+//
+//      em.flush();
+//      em.clear();
+//
+//      Member m = em.find(Member.class, member1.getId());
+//      System.out.println(m.getTeam().getClass());
+//
+//      System.out.println("-----");
+//      // 팀을 터치하는 순간에 select 쿼리가 실행됨
+//      m.getTeam().getName();
+//      System.out.println("-----");
+//
+//      List<Member> members = em.createQuery("select m from Member m", Member.class).getResultList();
 
-      Team team2 = new Team();
-      team2.setName("team2");
-      em.persist(team2);
+      //영속성 전이와 고아 객체
+      Child child1 = new Child();
+      Child child2 = new Child();
 
-      Member member1 = new Member();
-      member1.setUsername("member1");
-      member1.setTeam(team1);
-      em.persist(member1);
+      Parent parent = new Parent();
+      parent.addChild(child1);
+      parent.addChild(child2);
 
-      Member member2 = new Member();
-      member2.setUsername("member2");
-      member2.setTeam(team2);
-      em.persist(member2);
+      em.persist(parent); // @OneToMany(mappedBy = "parent", cascade = CascadeType.ALL) 그 하위도 persist한다.
+//      em.persist(child1);
+//      em.persist(child2);
 
-      em.flush();
-      em.clear();
-
-      Member m = em.find(Member.class, member1.getId());
-      System.out.println(m.getTeam().getClass());
-
-      System.out.println("-----");
-      // 팀을 터치하는 순간에 select 쿼리가 실행됨
-      m.getTeam().getName();
-      System.out.println("-----");
-
-      List<Member> members = em.createQuery("select m from Member m", Member.class).getResultList();
+      Parent findParent = em.find(Parent.class, parent.getId());
+      findParent.getChildList().remove(0);
 
       tx.commit();
     } catch (Exception e) {
