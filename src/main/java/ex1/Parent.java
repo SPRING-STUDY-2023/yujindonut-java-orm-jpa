@@ -14,7 +14,7 @@ public class Parent {
   private Long id;
   private String name;
 
-  @OneToMany(mappedBy = "parent", cascade = CascadeType.ALL)
+  @OneToMany(mappedBy = "parent", cascade = CascadeType.ALL, orphanRemoval = true)
   // 이 아래에 있는 애들도 Persist날려준다!
   private List<Child> childList = new ArrayList<>();
 
