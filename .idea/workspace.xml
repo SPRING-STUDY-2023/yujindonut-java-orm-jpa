@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f23ce4d-eb93-40b4-9ba5-5b8e927f43a6" name="변경" comment="[FEAT] 초기설정">
-      <change afterPath="$PROJECT_DIR$/src/main/java/jpql/Addresses.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jpql/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jpql/Mamber.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jpql/Orders.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jpql/Products.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jpql/Teem.java" afterDir="false" />
+    <list default="true" id="9f23ce4d-eb93-40b4-9ba5-5b8e927f43a6" name="변경" comment="[FEAT] 기본문법과 쿼리 API">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpaShop/domain/Delivery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpaShop/domain/Delivery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpql/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpql/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,7 +246,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675961101248</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="[FEAT] 기본문법과 쿼리 API">
+      <created>1675962053995</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1675962053995</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,6 +293,7 @@
     <MESSAGE value="[FEAT] 임베디드 타입" />
     <MESSAGE value="[FEAT] 값 불변객체" />
     <MESSAGE value="[FEAT] 초기설정" />
-    <option name="LAST_COMMIT_MESSAGE" value="[FEAT] 초기설정" />
+    <MESSAGE value="[FEAT] 기본문법과 쿼리 API" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FEAT] 기본문법과 쿼리 API" />
   </component>
 </project>

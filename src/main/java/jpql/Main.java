@@ -1,5 +1,6 @@
 package jpql;
 
+import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
@@ -22,10 +23,16 @@ public class Main {
       member.setAge(10);
       em.persist(member);
 
-      Mamber result = em.createQuery("select m from Mamber m where m.userName=:username", Mamber.class)
-              .setParameter("username", "member")
-                  .getSingleResult();
+//      Mamber result = em.createQuery("select m from Mamber m where m.userName=:username", Mamber.class).setParameter("username", "member").getSingleResult();
 
+//      묵시적 JOIN
+//      List<Teem> result = em.createQuery("select m.team from Mamber m", Teem.class).getResultList();
+//      명시적 JOIN
+//      List<Teem> result = em.createQuery("select t from Mamber m join m.team  t", Teem.class).getResultList();
+//      임베디드 타입 프로젝션
+//      em.createQuery("select o.addresses from Orders o", Addresses.class).getResultList();
+//      스칼라 타입 프로젝션
+      em.createQuery("select new jpql.MemberDTO( m.userName, m.age) from Mamber m", MemberDTO.class).getResultList();
       tx.commit();
     } catch (Exception e) {
       tx.rollback();
