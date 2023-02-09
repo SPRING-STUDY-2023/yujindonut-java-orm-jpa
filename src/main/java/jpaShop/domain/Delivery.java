@@ -1,5 +1,6 @@
 package jpaShop.domain;
 
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -14,9 +15,9 @@ public class Delivery extends Base {
   private long id;
 
   private String city;
-  private String street;
-  private String zipcode;
-  private DeliveryStatus status;
+
+  @Embedded
+  private Address address;
 
   @OneToOne(mappedBy = "delivery",fetch = FetchType.LAZY)
   private Order order;
