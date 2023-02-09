@@ -43,22 +43,30 @@ public class Member extends BaseEntity {
     this.favoriteFoods = favoriteFoods;
   }
 
-  public List<Address> getAddress() {
-    return address;
+  public List<AddressEntity> getAddressEntityList() {
+    return addressEntityList;
   }
 
-  public void setAddress(List<Address> address) {
-    this.address = address;
+  public void setAddressEntityList(List<AddressEntity> addressEntityList) {
+    this.addressEntityList = addressEntityList;
   }
+
+//  public List<Address> getAddress() {
+//    return address;
+//  }
+//
+//  public void setAddress(List<Address> address) {
+//    this.address = address;
+//  }
 
   @ElementCollection
   @CollectionTable(name = "FAVORITE_FOOD", joinColumns = @JoinColumn(name="MEMBER_ID"))
   @Column(name = "FOOD_NAME") // 값이 단하나일때만 가능
   private Set<String> favoriteFoods = new HashSet<>();
 
-  @ElementCollection
-  @CollectionTable(name = "ADDRESS", joinColumns = @JoinColumn(name="MEMBER_ID"))
-  private List<Address> address = new ArrayList<>();
+//  @ElementCollection
+//  @CollectionTable(name = "ADDRESS", joinColumns = @JoinColumn(name="MEMBER_ID"))
+//  private List<Address> address = new ArrayList<>();
 
   public Period getWorkPeriod() {
     return workPeriod;
@@ -76,13 +84,6 @@ public class Member extends BaseEntity {
     this.homeAddress = homeAddress;
   }
 
-  public Address getWorkAddress() {
-    return workAddress;
-  }
-
-  public void setWorkAddress(Address workAddress) {
-    this.workAddress = workAddress;
-  }
 //  @ManyToMany
 //  @JoinTable(name = "MEMBER_PRODUCT")
 //  private List<Product> productList = new ArrayList<>();
@@ -96,14 +97,18 @@ public class Member extends BaseEntity {
   @Embedded
   private Address homeAddress;
 
-  @Embedded
-  // 속성 재정의
-  @AttributeOverrides({
-      @AttributeOverride(name="city", column = @Column(name="WORK_CITY")),
-      @AttributeOverride(name="street", column = @Column(name="WORK_STREET")),
-      @AttributeOverride(name="zipcode", column = @Column(name="WORK_ZIPCODE"))
-  })
-  private Address workAddress;
+//  @Embedded
+//  // 속성 재정의
+//  @AttributeOverrides({
+//      @AttributeOverride(name="city", column = @Column(name="WORK_CITY")),
+//      @AttributeOverride(name="street", column = @Column(name="WORK_STREET")),
+//      @AttributeOverride(name="zipcode", column = @Column(name="WORK_ZIPCODE"))
+//  })
+//  private Address workAddress;
+
+  @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+  @JoinColumn(name = "MEMBER_ID")
+  private List<AddressEntity> addressEntityList = new ArrayList<>();
 
 //  public Long getTeamId() {
 //    return teamId;

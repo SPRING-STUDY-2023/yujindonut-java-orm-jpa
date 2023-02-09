@@ -148,8 +148,8 @@ public class JpaMain {
       member1.getFavoriteFoods().add("chicken");
       member1.getFavoriteFoods().add("pizza");
 
-      member1.getAddress().add(new Address("city1", "streeet1", "zipcode1"));
-      member1.getAddress().add(new Address("city2", "streeet2", "zipcode2"));
+//      member1.getAddress().add(new Address("city1", "streeet1", "zipcode1"));
+//      member1.getAddress().add(new Address("city2", "streeet2", "zipcode2"));
       em.persist(member1);
 
       Member findMember = em.find(Member.class, member1.getId());
@@ -161,14 +161,15 @@ public class JpaMain {
       findMember.getFavoriteFoods().remove("chicken");
       findMember.getFavoriteFoods().add("스파게티");
 
-      findMember.getAddress().remove(new Address("city2", "streeet2", "zipcode2"));
-      findMember.getAddress().add(new Address("city3", "streeet3", "zipcode3"));
+      // 값 타입 컬렉션의 대안
+      findMember.getAddressEntityList().remove(new AddressEntity("city2", "streeet2", "zipcode2"));
+      findMember.getAddressEntityList().add(new AddressEntity("city3", "streeet3", "zipcode3"));
       // equals & hashcode로 같은 값 판별함
 
-      List<Address> addressList = findMember.getAddress();
-      for(Address address: addressList) { // Collection들은 지연로딩이여서 이때 select함
-        System.out.println("address : " + address.getZipcode());
-      }
+//      List<Address> addressList = findMember.getAddress();
+//      for(Address address: addressList) { // Collection들은 지연로딩이여서 이때 select함
+//        System.out.println("address : " + address.getZipcode());
+//      }
 
 //
 //      Member member2 = new Member();
