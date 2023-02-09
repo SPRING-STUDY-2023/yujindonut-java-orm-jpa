@@ -5,17 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f23ce4d-eb93-40b4-9ba5-5b8e927f43a6" name="변경" comment="# &lt;type&gt;: &lt;subject&gt;&#10;##### Subject 50 characters ################# -&gt; |&#10;&#10;&#10;# Body Message&#10;######## Body 72 characters ####################################### -&gt; |&#10;&#10;# Issue Tracker Number or URL&#10;&#10;# --- COMMIT END ---&#10;# Type can be&#10;#   feat    : new feature&#10;#   fix     : bug fix&#10;#   refactor: refactoring production code&#10;#   style   : formatting, missing semi colons, etc; no code change&#10;#   docs    : changes to documentation&#10;#   test    : adding or refactoring tests&#10;#             no productin code change&#10;#   chore   : updating grunt tasks etc&#10;#             no production code change&#10;# ------------------&#10;# Remember me ~&#10;#   Capitalize the subject line&#10;#     제목줄은 대문자로 시작한다.&#10;#   Use the imperative mood in the subject line&#10;#     제목줄은 명령어로 작성한다.&#10;#   Do not end the subject line with a period&#10;#     제목줄은 마침표로 끝내지 않는다.&#10;#   Separate subject from body with a blank line&#10;#     본문과 제목에는 빈줄을 넣어서 구분한다.&#10;#   Use the body to explain what and why vs. how&#10;#     본문에는 &quot;어떻게&quot; 보다는 &quot;왜&quot;와 &quot;무엇을&quot; 설명한다.&#10;#   Can use multiple lines with &quot;-&quot; for bullet points in body&#10;#     본문에 목록을 나타낼때는 &quot;-&quot;로 시작한다.&#10;# ------------------">
-      <change afterPath="$PROJECT_DIR$/src/main/java/jpaShop/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jpaShop/domain/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jpaShop/domain/Member.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jpaShop/domain/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jpaShop/domain/OrderItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jpaShop/domain/OrderStatus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ex1/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ex1/Address.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ex1/JpaMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ex1/JpaMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ex1/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ex1/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ex1/RoleType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ex1/RoleType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +24,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JpbToolWindowState">
@@ -72,6 +70,9 @@
     <key name="CreateClassDialog.RecentsKey">
       <recent name="ex1" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="jpaShop.domain" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -85,7 +86,17 @@
       <workItem from="1675233075895" duration="3678000" />
       <workItem from="1675300345889" duration="4660000" />
       <workItem from="1675320573644" duration="597000" />
-      <workItem from="1675388749950" duration="597000" />
+      <workItem from="1675388749950" duration="2043000" />
+      <workItem from="1675391009405" duration="2456000" />
+      <workItem from="1675393738235" duration="1803000" />
+      <workItem from="1675395626030" duration="171000" />
+      <workItem from="1675399446454" duration="1296000" />
+      <workItem from="1675654805217" duration="3575000" />
+      <workItem from="1675737352700" duration="5879000" />
+      <workItem from="1675786280093" duration="145000" />
+      <workItem from="1675823333002" duration="4423000" />
+      <workItem from="1675918773642" duration="3298000" />
+      <workItem from="1675941504586" duration="1170000" />
     </task>
     <task id="LOCAL-00001" summary="[INIT] 프로젝트 초기셋팅 설정">
       <created>1675233360315</created>
@@ -115,17 +126,164 @@
       <option name="project" value="LOCAL" />
       <updated>1675306103821</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="[FEAT] Section 4 - 엔티티매핑&#10;Section 4 - 엔티티매핑을 듣고 정리합니다.">
+      <created>1675389603462</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1675389603462</updated>
+    </task>
+    <task id="LOCAL-00006" summary="[FEAT] 객체지향적이지 않은 설계 예시">
+      <created>1675390642215</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1675390642215</updated>
+    </task>
+    <task id="LOCAL-00007" summary="[FEAT] 단방향 연관관계 - ManyToOne">
+      <created>1675391047213</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1675391047213</updated>
+    </task>
+    <task id="LOCAL-00008" summary="[FEAT] 단방향 연관관계">
+      <created>1675391313179</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1675391313179</updated>
+    </task>
+    <task id="LOCAL-00009" summary="[FEAT] 양방향 설계">
+      <created>1675395027261</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1675395027261</updated>
+    </task>
+    <task id="LOCAL-00010" summary="[FEAT] 실전예제2 - 연관관계 매핑 시작">
+      <created>1675395649289</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1675395649289</updated>
+    </task>
+    <task id="LOCAL-00011" summary="[FEAT] 다양한 연관관계 매핑 - 실전예제3">
+      <created>1675659057649</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1675659057649</updated>
+    </task>
+    <task id="LOCAL-00012" summary="[FEAT] 상속관계 매핑">
+      <created>1675740135254</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1675740135254</updated>
+    </task>
+    <task id="LOCAL-00013" summary="[FEAT] MappedSuperclass">
+      <created>1675740156730</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1675740156730</updated>
+    </task>
+    <task id="LOCAL-00014" summary="[FEAT]고급매핑">
+      <created>1675826687042</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1675826687042</updated>
+    </task>
+    <task id="LOCAL-00015" summary="[FEAT] 프록시">
+      <created>1675826702742</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1675826702742</updated>
+    </task>
+    <task id="LOCAL-00016" summary="[FEAT] 즉시로딩과 지연로딩">
+      <created>1675828636042</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1675828636042</updated>
+    </task>
+    <task id="LOCAL-00017" summary="[FEAT] 영속성 전이(Cascade)">
+      <created>1675829474339</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1675829474339</updated>
+    </task>
+    <task id="LOCAL-00018" summary="[FEAT] 고아객체">
+      <created>1675829959050</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1675829959050</updated>
+    </task>
+    <task id="LOCAL-00019" summary="[FEAT] 실전예제5 -연관관계관리">
+      <created>1675830270555</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1675830270555</updated>
+    </task>
+    <task id="LOCAL-00020" summary="[FEAT] 임베디드 타입">
+      <created>1675938489612</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1675938489612</updated>
+    </task>
+    <task id="LOCAL-00021" summary="[FEAT] 값 불변객체">
+      <created>1675939683008</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1675939683008</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="[INIT] 프로젝트 초기셋팅 설정" />
     <MESSAGE value="[ADD] EntityManager를 이용한 CRUD 실습" />
     <MESSAGE value="[FEAT] Entitiy 매핑" />
     <MESSAGE value="[FEAT] 기본키 매핑" />
-    <option name="LAST_COMMIT_MESSAGE" value="[FEAT] 기본키 매핑" />
+    <MESSAGE value="[FEAT] Section 4 - 엔티티매핑&#10;Section 4 - 엔티티매핑을 듣고 정리합니다." />
+    <MESSAGE value="[FEAT] 객체지향적이지 않은 설계 예시" />
+    <MESSAGE value="[FEAT] 단방향 연관관계 - ManyToOne" />
+    <MESSAGE value="[FEAT] 단방향 연관관계" />
+    <MESSAGE value="[FEAT] 양방향 설계" />
+    <MESSAGE value="[FEAT] 실전예제2 - 연관관계 매핑 시작" />
+    <MESSAGE value="[FEAT] 다양한 연관관계 매핑 - 실전예제3" />
+    <MESSAGE value="[FEAT] 상속관계 매핑" />
+    <MESSAGE value="[FEAT] MappedSuperclass" />
+    <MESSAGE value="[FEAT]고급매핑" />
+    <MESSAGE value="[FEAT] 프록시" />
+    <MESSAGE value="[FEAT] 즉시로딩과 지연로딩" />
+    <MESSAGE value="[FEAT] 영속성 전이(Cascade)" />
+    <MESSAGE value="[FEAT] 고아객체" />
+    <MESSAGE value="[FEAT] 실전예제5 -연관관계관리" />
+    <MESSAGE value="[FEAT] 임베디드 타입" />
+    <MESSAGE value="[FEAT] 값 불변객체" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FEAT] 값 불변객체" />
   </component>
 </project>
