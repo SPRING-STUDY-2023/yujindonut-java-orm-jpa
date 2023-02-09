@@ -127,29 +127,54 @@ public class JpaMain {
 //      List<Member> members = em.createQuery("select m from Member m", Member.class).getResultList();
 
       //영속성 전이와 고아 객체
-      Child child1 = new Child();
-      Child child2 = new Child();
-
-      Parent parent = new Parent();
-      parent.addChild(child1);
-      parent.addChild(child2);
-
-      em.persist(parent); // @OneToMany(mappedBy = "parent", cascade = CascadeType.ALL) 그 하위도 persist한다.
+//      Child child1 = new Child();
+//      Child child2 = new Child();
+//
+//      Parent parent = new Parent();
+//      parent.addChild(child1);
+//      parent.addChild(child2);
+//
+//      em.persist(parent); // @OneToMany(mappedBy = "parent", cascade = CascadeType.ALL) 그 하위도 persist한다.
 //      em.persist(child1);
 //      em.persist(child2);
 
-      Parent findParent = em.find(Parent.class, parent.getId());
-      findParent.getChildList().remove(0);
-
+//      Parent findParent = em.find(Parent.class, parent.getId());
+//      findParent.getChildList().remove(0);
+//
+//      값 타입
       Member member1 = new Member();
       member1.setUsername("member1");
       member1.setHomeAddress(new Address("city", "streeet", "zipcode"));
+      member1.getFavoriteFoods().add("chicken");
+      member1.getFavoriteFoods().add("pizza");
+
+      member1.getAddress().add(new Address("city1", "streeet1", "zipcode1"));
+      member1.getAddress().add(new Address("city2", "streeet2", "zipcode2"));
       em.persist(member1);
 
-      Member member2 = new Member();
-      member2.setUsername("member2");
-      member2.setHomeAddress(new Address("city", "streeet", "zipcode"));
-      em.persist(member2);
+      Member findMember = em.find(Member.class, member1.getId());
+
+//      findMember.getHomeAddress().setCity("hhh"); // 오류 추적 어려움
+      findMember.setHomeAddress(new Address("newCity", "newStreet", "newZipcode"));
+
+      //Collection 타입 수정
+      findMember.getFavoriteFoods().remove("chicken");
+      findMember.getFavoriteFoods().add("스파게티");
+
+      findMember.getAddress().remove(new Address("city2", "streeet2", "zipcode2"));
+      findMember.getAddress().add(new Address("city3", "streeet3", "zipcode3"));
+      // equals & hashcode로 같은 값 판별함
+
+      List<Address> addressList = findMember.getAddress();
+      for(Address address: addressList) { // Collection들은 지연로딩이여서 이때 select함
+        System.out.println("address : " + address.getZipcode());
+      }
+
+//
+//      Member member2 = new Member();
+//      member2.setUsername("member2");
+//      member2.setHomeAddress(new Address("city", "streeet", "zipcode"));
+//      em.persist(member2);
 
 //      member1.getHomeAddress().setCity("newCity"); //sideEffect
 

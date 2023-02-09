@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f23ce4d-eb93-40b4-9ba5-5b8e927f43a6" name="변경" comment="[FEAT] 임베디드 타입">
+    <list default="true" id="9f23ce4d-eb93-40b4-9ba5-5b8e927f43a6" name="변경" comment="# &lt;type&gt;: &lt;subject&gt;&#10;##### Subject 50 characters ################# -&gt; |&#10;&#10;&#10;# Body Message&#10;######## Body 72 characters ####################################### -&gt; |&#10;&#10;# Issue Tracker Number or URL&#10;&#10;# --- COMMIT END ---&#10;# Type can be&#10;#   feat    : new feature&#10;#   fix     : bug fix&#10;#   refactor: refactoring production code&#10;#   style   : formatting, missing semi colons, etc; no code change&#10;#   docs    : changes to documentation&#10;#   test    : adding or refactoring tests&#10;#             no productin code change&#10;#   chore   : updating grunt tasks etc&#10;#             no production code change&#10;# ------------------&#10;# Remember me ~&#10;#   Capitalize the subject line&#10;#     제목줄은 대문자로 시작한다.&#10;#   Use the imperative mood in the subject line&#10;#     제목줄은 명령어로 작성한다.&#10;#   Do not end the subject line with a period&#10;#     제목줄은 마침표로 끝내지 않는다.&#10;#   Separate subject from body with a blank line&#10;#     본문과 제목에는 빈줄을 넣어서 구분한다.&#10;#   Use the body to explain what and why vs. how&#10;#     본문에는 &quot;어떻게&quot; 보다는 &quot;왜&quot;와 &quot;무엇을&quot; 설명한다.&#10;#   Can use multiple lines with &quot;-&quot; for bullet points in body&#10;#     본문에 목록을 나타낼때는 &quot;-&quot;로 시작한다.&#10;# ------------------">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ex1/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ex1/Address.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ex1/JpaMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ex1/JpaMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ex1/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ex1/Member.java" afterDir="false" />
     </list>
@@ -93,7 +95,8 @@
       <workItem from="1675737352700" duration="5879000" />
       <workItem from="1675786280093" duration="145000" />
       <workItem from="1675823333002" duration="4423000" />
-      <workItem from="1675918773642" duration="2655000" />
+      <workItem from="1675918773642" duration="3298000" />
+      <workItem from="1675941504586" duration="1170000" />
     </task>
     <task id="LOCAL-00001" summary="[INIT] 프로젝트 초기셋팅 설정">
       <created>1675233360315</created>
@@ -235,7 +238,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675938489612</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="[FEAT] 값 불변객체">
+      <created>1675939683008</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1675939683008</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,6 +283,7 @@
     <MESSAGE value="[FEAT] 고아객체" />
     <MESSAGE value="[FEAT] 실전예제5 -연관관계관리" />
     <MESSAGE value="[FEAT] 임베디드 타입" />
-    <option name="LAST_COMMIT_MESSAGE" value="[FEAT] 임베디드 타입" />
+    <MESSAGE value="[FEAT] 값 불변객체" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FEAT] 값 불변객체" />
   </component>
 </project>

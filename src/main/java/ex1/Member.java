@@ -1,7 +1,9 @@
 package ex1;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -32,6 +34,31 @@ public class Member extends BaseEntity {
   @JoinColumn(name="LOCKER_ID")
   private Locker locker;
   private Integer age;
+
+  public Set<String> getFavoriteFoods() {
+    return favoriteFoods;
+  }
+
+  public void setFavoriteFoods(Set<String> favoriteFoods) {
+    this.favoriteFoods = favoriteFoods;
+  }
+
+  public List<Address> getAddress() {
+    return address;
+  }
+
+  public void setAddress(List<Address> address) {
+    this.address = address;
+  }
+
+  @ElementCollection
+  @CollectionTable(name = "FAVORITE_FOOD", joinColumns = @JoinColumn(name="MEMBER_ID"))
+  @Column(name = "FOOD_NAME") // 값이 단하나일때만 가능
+  private Set<String> favoriteFoods = new HashSet<>();
+
+  @ElementCollection
+  @CollectionTable(name = "ADDRESS", joinColumns = @JoinColumn(name="MEMBER_ID"))
+  private List<Address> address = new ArrayList<>();
 
   public Period getWorkPeriod() {
     return workPeriod;
