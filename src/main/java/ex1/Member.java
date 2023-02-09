@@ -40,6 +40,21 @@ public class Member extends BaseEntity {
   @OneToMany(mappedBy = "member")
   private List<MemberProduct> memberProducts = new ArrayList<>();
 
+  @Embedded
+  private Period workPeriod;
+
+  @Embedded
+  private Address homeAddress;
+
+  @Embedded
+  // 속성 재정의
+  @AttributeOverrides({
+      @AttributeOverride(name="city", column = @Column(name="WORK_CITY")),
+      @AttributeOverride(name="street", column = @Column(name="WORK_STREET")),
+      @AttributeOverride(name="zipcode", column = @Column(name="WORK_ZIPCODE"))
+  })
+  private Address workAddress;
+
 //  public Long getTeamId() {
 //    return teamId;
 //  }
