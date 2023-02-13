@@ -1,5 +1,8 @@
 package jpql;
 
+import com.sun.jmx.remote.internal.ClientCommunicatorAdmin;
+import ex1.Book;
+import ex1.Item;
 import ex1.Member;
 import java.util.List;
 import javax.persistence.EntityManager;
@@ -25,6 +28,7 @@ public class Main {
       Mamber member = new Mamber();
       member.setUserName("member1");
       member.setAge(10);
+      member.setType(MemberType.ADMIN);
       member.setTeam(team);
       em.persist(member);
 
@@ -55,8 +59,30 @@ public class Main {
 //      }
 
 //      JOIN
-      String query = "select m from Member m inner join m.team t";
+//      String query = "select m from Member m inner join m.team t";
 
+//      서브쿼리
+//      String query = "select (select avg(m.age) from Mamber m) as avgAge from Mamber m join Teem t on m.userName = t.name";
+//      List<Mamber> result = em.createQuery(query, Mamber.class).getResultList();
+
+//      JPQL 타입 표현
+      String query = "select m.userName, 'HELLO', True From Mamber m " +
+//          "where m.type = jpql.MemberType.ADMIN";
+//          + "where m.type = ADMIN"; //이렇게 직접 사용이 안됨
+                    "where m.type = :userType";
+
+          List<Mamber> result = em.createQuery(query, Mamber.class)
+              .setParameter("userType", MemberType.ADMIN)
+              .getResultList();
+
+//          상속관계에서 엔티티타입 사용가능
+      Book book = new Book();
+      book.setName("JPA");
+      book.setAuthor("김영한");
+
+      em.persist(book);
+      em.createQuery("select i from Item i where type(i) = Book", Item.class);
+      // Discriminator Value값이 Book인것을 가져옴
 
       tx.commit();
     } catch (Exception e) {

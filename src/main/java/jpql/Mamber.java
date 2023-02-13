@@ -2,6 +2,8 @@ package jpql;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -20,6 +22,9 @@ public class Mamber {
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "TEAM_ID")
   private Teem team;
+
+  @Enumerated(EnumType.STRING)
+  private MemberType type;
 
   public Long getId() {
     return id;
@@ -52,6 +57,14 @@ public class Mamber {
   public void setTeam(Teem team) {
     this.team = team;
     team.getMembers().add(this);
+  }
+
+  public MemberType getType() {
+    return type;
+  }
+
+  public void setType(MemberType type) {
+    this.type = type;
   }
 
   @Override
