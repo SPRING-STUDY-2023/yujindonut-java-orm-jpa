@@ -51,4 +51,13 @@ public class Mamber {
   public void setTeam(Teem team) {
     this.team = team;
   }
+
+  @Override
+  public String toString() {
+    return "Mamber{" +
+        "id=" + id +
+        ", userName='" + userName + '\'' +
+        ", age=" + age +
+        '}';
+  }
 }
