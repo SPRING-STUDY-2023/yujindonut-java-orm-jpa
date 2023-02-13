@@ -32,8 +32,6 @@ public class Main {
       member.setTeam(team);
       em.persist(member);
 
-
-
       em.flush();
       em.clear();
 
@@ -66,23 +64,33 @@ public class Main {
 //      List<Mamber> result = em.createQuery(query, Mamber.class).getResultList();
 
 //      JPQL 타입 표현
-      String query = "select m.userName, 'HELLO', True From Mamber m " +
-//          "where m.type = jpql.MemberType.ADMIN";
-//          + "where m.type = ADMIN"; //이렇게 직접 사용이 안됨
-                    "where m.type = :userType";
-
-          List<Mamber> result = em.createQuery(query, Mamber.class)
-              .setParameter("userType", MemberType.ADMIN)
-              .getResultList();
+//      String query = "select m.userName, 'HELLO', True From Mamber m " +
+////          "where m.type = jpql.MemberType.ADMIN";
+////          + "where m.type = ADMIN"; //이렇게 직접 사용이 안됨
+//                    "where m.type = :userType";
+//
+//          List<Mamber> result = em.createQuery(query, Mamber.class)
+//              .setParameter("userType", MemberType.ADMIN)
+//              .getResultList();
 
 //          상속관계에서 엔티티타입 사용가능
-      Book book = new Book();
-      book.setName("JPA");
-      book.setAuthor("김영한");
-
-      em.persist(book);
-      em.createQuery("select i from Item i where type(i) = Book", Item.class);
+//      Book book = new Book();
+//      book.setName("JPA");
+//      book.setAuthor("김영한");
+//
+//      em.persist(book);
+//      em.createQuery("select i from Item i where type(i) = Book", Item.class);
       // Discriminator Value값이 Book인것을 가져옴
+
+//      조건식
+//      String query = "select case "
+//          + "when m.age <= 10 then '학생요금' "
+//          + "when m.age >= 60 then '경로요금' "
+//          + "else '일반요금' "
+//          + "end " + "from Mamber m";
+      String query = "select coalesce(m.userName, '이름없는 회원') as username "
+          + "from Mamber m ";
+      List<String> result = em.createQuery(query, String.class).getResultList();
 
       tx.commit();
     } catch (Exception e) {
