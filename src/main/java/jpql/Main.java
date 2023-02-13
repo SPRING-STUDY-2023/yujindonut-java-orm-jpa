@@ -18,11 +18,17 @@ public class Main {
     tx.begin();
 
     try {
+      Teem team = new Teem();
+      team.setName("TeamA");
+      em.persist(team);
 
       Mamber member = new Mamber();
       member.setUserName("member1");
       member.setAge(10);
+      member.setTeam(team);
       em.persist(member);
+
+
 
       em.flush();
       em.clear();
@@ -39,15 +45,18 @@ public class Main {
 //      em.createQuery("select new jpql.MemberDTO( m.userName, m.age) from Mamber m", MemberDTO.class).getResultList();
 
 //      페이징
-      List<Mamber> result = em.createQuery("select m from Mamber m order by m.age desc", Mamber.class)
-          .setFirstResult(0)
-              .setMaxResults(0)
-                  .getResultList();
+//      List<Mamber> result = em.createQuery("select m from Mamber m order by m.age desc", Mamber.class)
+//          .setFirstResult(0)
+//              .setMaxResults(0)
+//                  .getResultList();
+//      System.out.println("result size = " + result.size());
+//      for (Mamber m : result) {
+//        System.out.println("mamber = " + member);
+//      }
 
-      System.out.println("result size = " + result.size());
-      for (Mamber m : result) {
-        System.out.println("mamber = " + member);
-      }
+//      JOIN
+      String query = "select m from Member m inner join m.team t";
+
 
       tx.commit();
     } catch (Exception e) {
