@@ -133,18 +133,25 @@ public class Main {
 //      for(Mamber m : result) {
 //        System.out.println("mamber = " + m.getUserName() + ", " + m.getAge());
 //      }
-      String query1 = "select t From Teem t";
-      List<Teem> result = em.createQuery(query1, Teem.class)
-          .setFirstResult(0)
-          .setMaxResults(2)
-          .getResultList();
+//      String query1 = "select t From Teem t";
+//      List<Teem> result = em.createQuery(query1, Teem.class)
+//          .setFirstResult(0)
+//          .setMaxResults(2)
+//          .getResultList();
+//
+//      for(Teem teem : result) {
+//        System.out.println("Teem = " + teem.getName() + "| members= " + teem.getMembers().size());
+//        for(Mamber mamber: teem.getMembers()){
+//          System.out.println("-> member = " + mamber);
+//        }
+//      }
 
-      for(Teem teem : result) {
-        System.out.println("Teem = " + teem.getName() + "| members= " + teem.getMembers().size());
-        for(Mamber mamber: teem.getMembers()){
-          System.out.println("-> member = " + mamber);
-        }
-      }
+//      엔티티 직접 사용
+      String query = "select m From Mamber m where m =: member";
+      Mamber findMember = em.createQuery(query, Mamber.class)
+              .setParameter("member", member1)
+                  .getSingleResult();
+      System.out.println("findMember = " + findMember);
 
       tx.commit();
     } catch (Exception e) {
