@@ -154,13 +154,20 @@ public class Main {
 //      System.out.println("findMember = " + findMember);
 
 //      Named 쿼리
-      List<Mamber> resultList = em.createNamedQuery("Member.findByUsername")
-              .setParameter("username", "member1")
-                  .getResultList();
+//      List<Mamber> resultList = em.createNamedQuery("Member.findByUsername")
+//              .setParameter("username", "member1")
+//                  .getResultList();
+//
+//      for(Mamber m : resultList) {
+//        System.out.println("member : " + m);
+//      }
+//    벌크 연산
+      //FLUSH가 자동 호출 ( 영속성 컨텍스트에 있는 것을 DB에 넣는 것 - DB에 있는 것을 영속성 컨텍스트에 넣는 것은 아님)
+      int i = em.createQuery("update Mamber m set m.age = 20")
+          .executeUpdate();
+      System.out.println("result Count " + i);
 
-      for(Mamber m : resultList) {
-        System.out.println("member : " + m);
-      }
+      em.clear(); // 영속성 컨텍스트에 있는 값들은 DB 반영 전의 값, 영속성 컨텍스트를 정리해야함
 
       tx.commit();
     } catch (Exception e) {

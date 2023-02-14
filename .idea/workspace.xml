@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f23ce4d-eb93-40b4-9ba5-5b8e927f43a6" name="변경" comment="[FEAT] 엔티티 직접 사용">
+    <list default="true" id="9f23ce4d-eb93-40b4-9ba5-5b8e927f43a6" name="변경" comment="[FEAT] Named 쿼리">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jpql/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpql/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpql/Mamber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpql/Mamber.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +94,7 @@
       <workItem from="1676025479026" duration="599000" />
       <workItem from="1676248399508" duration="4318000" />
       <workItem from="1676336735426" duration="3108000" />
-      <workItem from="1676340739029" duration="4204000" />
+      <workItem from="1676340739029" duration="5141000" />
     </task>
     <task id="LOCAL-00001" summary="[INIT] 프로젝트 초기셋팅 설정">
       <created>1675233360315</created>
@@ -321,7 +320,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676349535645</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="[FEAT] Named 쿼리">
+      <created>1676350344926</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1676350344926</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -339,7 +345,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[FEAT] 단방향 연관관계" />
     <MESSAGE value="[FEAT] 양방향 설계" />
     <MESSAGE value="[FEAT] 실전예제2 - 연관관계 매핑 시작" />
     <MESSAGE value="[FEAT] 다양한 연관관계 매핑 - 실전예제3" />
@@ -364,6 +369,7 @@
     <MESSAGE value="[FEAT] 패치조인" />
     <MESSAGE value="[FEAT] 페치조인의 특징과 한계" />
     <MESSAGE value="[FEAT] 엔티티 직접 사용" />
-    <option name="LAST_COMMIT_MESSAGE" value="[FEAT] 엔티티 직접 사용" />
+    <MESSAGE value="[FEAT] Named 쿼리" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FEAT] Named 쿼리" />
   </component>
 </project>
