@@ -4,6 +4,8 @@ import com.sun.jmx.remote.internal.ClientCommunicatorAdmin;
 import ex1.Book;
 import ex1.Item;
 import ex1.Member;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -88,9 +90,27 @@ public class Main {
 //          + "when m.age >= 60 then '경로요금' "
 //          + "else '일반요금' "
 //          + "end " + "from Mamber m";
-      String query = "select coalesce(m.userName, '이름없는 회원') as username "
-          + "from Mamber m ";
-      List<String> result = em.createQuery(query, String.class).getResultList();
+//      String query = "select coalesce(m.userName, '이름없는 회원') as username "
+//          + "from Mamber m ";
+//      List<String> result = em.createQuery(query, String.class).getResultList();
+
+//      경로표현식
+      String query = "select t.members.size From Team t";
+      Integer result = em.createQuery(query, Integer.class)
+              .getSingleResult();
+      System.out.println("result = " + result);
+      //묵시적 join - 잘 사용하지 않음
+      String query1 = "select t.members From Team t";
+      List<Collection>  result1 = em.createQuery(query1, Collection.class)
+          .getResultList();
+      System.out.println("result = " + result);
+
+      //명시적 조인
+      String query2 = "select m.age From Team t join t.members m";
+      List<Collection>  result2 = em.createQuery(query2, Collection.class)
+          .getResultList();
+
+
 
       tx.commit();
     } catch (Exception e) {

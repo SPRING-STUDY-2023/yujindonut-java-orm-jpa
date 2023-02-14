@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9f23ce4d-eb93-40b4-9ba5-5b8e927f43a6" name="변경" comment="# &lt;type&gt;: &lt;subject&gt;&#10;##### Subject 50 characters ################# -&gt; |&#10;&#10;&#10;# Body Message&#10;######## Body 72 characters ####################################### -&gt; |&#10;&#10;# Issue Tracker Number or URL&#10;&#10;# --- COMMIT END ---&#10;# Type can be&#10;#   feat    : new feature&#10;#   fix     : bug fix&#10;#   refactor: refactoring production code&#10;#   style   : formatting, missing semi colons, etc; no code change&#10;#   docs    : changes to documentation&#10;#   test    : adding or refactoring tests&#10;#             no productin code change&#10;#   chore   : updating grunt tasks etc&#10;#             no production code change&#10;# ------------------&#10;# Remember me ~&#10;#   Capitalize the subject line&#10;#     제목줄은 대문자로 시작한다.&#10;#   Use the imperative mood in the subject line&#10;#     제목줄은 명령어로 작성한다.&#10;#   Do not end the subject line with a period&#10;#     제목줄은 마침표로 끝내지 않는다.&#10;#   Separate subject from body with a blank line&#10;#     본문과 제목에는 빈줄을 넣어서 구분한다.&#10;#   Use the body to explain what and why vs. how&#10;#     본문에는 &quot;어떻게&quot; 보다는 &quot;왜&quot;와 &quot;무엇을&quot; 설명한다.&#10;#   Can use multiple lines with &quot;-&quot; for bullet points in body&#10;#     본문에 목록을 나타낼때는 &quot;-&quot;로 시작한다.&#10;# ------------------">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpql/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpql/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +16,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -91,6 +92,8 @@
       <workItem from="1675918773642" duration="3298000" />
       <workItem from="1675941504586" duration="1170000" />
       <workItem from="1676025479026" duration="599000" />
+      <workItem from="1676248399508" duration="4318000" />
+      <workItem from="1676336735426" duration="1142000" />
     </task>
     <task id="LOCAL-00001" summary="[INIT] 프로젝트 초기셋팅 설정">
       <created>1675233360315</created>
@@ -260,7 +263,35 @@
       <option name="project" value="LOCAL" />
       <updated>1675962856119</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="[FEAT] 페이징">
+      <created>1676254076865</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1676254076865</updated>
+    </task>
+    <task id="LOCAL-00026" summary="[FEAT] JOIN">
+      <created>1676255111616</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1676255111616</updated>
+    </task>
+    <task id="LOCAL-00027" summary="[FEAT] JPQL 타입 표현과 기타식">
+      <created>1676256898708</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1676256898708</updated>
+    </task>
+    <task id="LOCAL-00028" summary="[FEAT] 조건식">
+      <created>1676257363774</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1676257363774</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,9 +309,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[INIT] 프로젝트 초기셋팅 설정" />
-    <MESSAGE value="[ADD] EntityManager를 이용한 CRUD 실습" />
-    <MESSAGE value="[FEAT] Entitiy 매핑" />
     <MESSAGE value="[FEAT] 기본키 매핑" />
     <MESSAGE value="[FEAT] Section 4 - 엔티티매핑&#10;Section 4 - 엔티티매핑을 듣고 정리합니다." />
     <MESSAGE value="[FEAT] 객체지향적이지 않은 설계 예시" />
@@ -302,6 +330,10 @@
     <MESSAGE value="[FEAT] 초기설정" />
     <MESSAGE value="[FEAT] 기본문법과 쿼리 API" />
     <MESSAGE value="[FEAT] 프로젝션 (Select)" />
-    <option name="LAST_COMMIT_MESSAGE" value="[FEAT] 프로젝션 (Select)" />
+    <MESSAGE value="[FEAT] 페이징" />
+    <MESSAGE value="[FEAT] JOIN" />
+    <MESSAGE value="[FEAT] JPQL 타입 표현과 기타식" />
+    <MESSAGE value="[FEAT] 조건식" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FEAT] 조건식" />
   </component>
 </project>
