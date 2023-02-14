@@ -93,7 +93,8 @@
       <workItem from="1675941504586" duration="1170000" />
       <workItem from="1676025479026" duration="599000" />
       <workItem from="1676248399508" duration="4318000" />
-      <workItem from="1676336735426" duration="1142000" />
+      <workItem from="1676336735426" duration="3108000" />
+      <workItem from="1676340739029" duration="356000" />
     </task>
     <task id="LOCAL-00001" summary="[INIT] 프로젝트 초기셋팅 설정">
       <created>1675233360315</created>
@@ -291,7 +292,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676257363774</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="[FEAT] 경로표현식">
+      <created>1676339744846</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1676339744846</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,7 +317,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[FEAT] 기본키 매핑" />
     <MESSAGE value="[FEAT] Section 4 - 엔티티매핑&#10;Section 4 - 엔티티매핑을 듣고 정리합니다." />
     <MESSAGE value="[FEAT] 객체지향적이지 않은 설계 예시" />
     <MESSAGE value="[FEAT] 단방향 연관관계 - ManyToOne" />
@@ -334,6 +341,7 @@
     <MESSAGE value="[FEAT] JOIN" />
     <MESSAGE value="[FEAT] JPQL 타입 표현과 기타식" />
     <MESSAGE value="[FEAT] 조건식" />
-    <option name="LAST_COMMIT_MESSAGE" value="[FEAT] 조건식" />
+    <MESSAGE value="[FEAT] 경로표현식" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FEAT] 경로표현식" />
   </component>
 </project>

@@ -1,11 +1,6 @@
 package jpql;
 
-import com.sun.jmx.remote.internal.ClientCommunicatorAdmin;
-import ex1.Book;
-import ex1.Item;
-import ex1.Member;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -23,16 +18,34 @@ public class Main {
     tx.begin();
 
     try {
-      Teem team = new Teem();
-      team.setName("TeamA");
-      em.persist(team);
+      Teem teamA = new Teem();
+      teamA.setName("TeamA");
+      em.persist(teamA);
 
-      Mamber member = new Mamber();
-      member.setUserName("member1");
-      member.setAge(10);
-      member.setType(MemberType.ADMIN);
-      member.setTeam(team);
-      em.persist(member);
+      Teem teamB = new Teem();
+      teamB.setName("TeamB");
+      em.persist(teamB);
+
+      Mamber member1 = new Mamber();
+      member1.setUserName("member1");
+      member1.setAge(10);
+      member1.setType(MemberType.ADMIN);
+      member1.setTeam(teamA);
+      em.persist(member1);
+
+      Mamber member2 = new Mamber();
+      member2.setUserName("member2");
+      member2.setAge(10);
+      member2.setType(MemberType.ADMIN);
+      member2.setTeam(teamA);
+      em.persist(member2);
+
+      Mamber member3 = new Mamber();
+      member3.setUserName("member3");
+      member3.setAge(10);
+      member3.setType(MemberType.ADMIN);
+      member3.setTeam(teamB);
+      em.persist(member3);
 
       em.flush();
       em.clear();
@@ -95,22 +108,40 @@ public class Main {
 //      List<String> result = em.createQuery(query, String.class).getResultList();
 
 //      경로표현식
-      String query = "select t.members.size From Team t";
-      Integer result = em.createQuery(query, Integer.class)
-              .getSingleResult();
-      System.out.println("result = " + result);
-      //묵시적 join - 잘 사용하지 않음
-      String query1 = "select t.members From Team t";
-      List<Collection>  result1 = em.createQuery(query1, Collection.class)
-          .getResultList();
-      System.out.println("result = " + result);
+//      String query = "select t.members.size From Team t";
+//      Integer result = em.createQuery(query, Integer.class)
+//              .getSingleResult();
+//      System.out.println("result = " + result);
+//      //묵시적 join - 잘 사용하지 않음
+//      String query1 = "select t.members From Team t";
+//      List<Collection>  result1 = em.createQuery(query1, Collection.class)
+//          .getResultList();
+//      System.out.println("result = " + result);
 
       //명시적 조인
-      String query2 = "select m.age From Team t join t.members m";
-      List<Collection>  result2 = em.createQuery(query2, Collection.class)
-          .getResultList();
+//      String query2 = "select m.age From Team t join t.members m";
+//      List<Collection>  result2 = em.createQuery(query2, Collection.class)
+//          .getResultList();
 
+//      FETCH 조인
+//      프록시로 Team 가져옴
+//      회원 100명을 select N + 1 (첫번째 날린 쿼리 (회원을 가져오기위해) + N (100번 돈다))
+//      String query1 = "select m.team From Mamber m";
+//      String query1 = "select m From Mamber m join fetch m.team";
+//      List<Mamber> result = em.createQuery(query1, Mamber.class).getResultList();
+//
+//      for(Mamber m : result) {
+//        System.out.println("mamber = " + m.getUserName() + ", " + m.getAge());
+//      }
+      String query1 = "select distinct t From Teem t join fetch t.members";
+      List<Teem> result = em.createQuery(query1, Teem.class).getResultList();
 
+      for(Teem teem : result) {
+        System.out.println("Teem = " + teem.getName() + "| members= " + teem.getMembers().size());
+        for(Mamber mamber: teem.getMembers()){
+          System.out.println("-> member = " + mamber);
+        }
+      }
 
       tx.commit();
     } catch (Exception e) {
