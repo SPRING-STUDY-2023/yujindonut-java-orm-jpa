@@ -147,11 +147,20 @@ public class Main {
 //      }
 
 //      엔티티 직접 사용
-      String query = "select m From Mamber m where m =: member";
-      Mamber findMember = em.createQuery(query, Mamber.class)
-              .setParameter("member", member1)
-                  .getSingleResult();
-      System.out.println("findMember = " + findMember);
+//      String query = "select m From Mamber m where m =: member";
+//      Mamber findMember = em.createQuery(query, Mamber.class)
+//              .setParameter("member", member1)
+//                  .getSingleResult();
+//      System.out.println("findMember = " + findMember);
+
+//      Named 쿼리
+      List<Mamber> resultList = em.createNamedQuery("Member.findByUsername")
+              .setParameter("username", "member1")
+                  .getResultList();
+
+      for(Mamber m : resultList) {
+        System.out.println("member : " + m);
+      }
 
       tx.commit();
     } catch (Exception e) {
