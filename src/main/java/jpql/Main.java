@@ -133,8 +133,11 @@ public class Main {
 //      for(Mamber m : result) {
 //        System.out.println("mamber = " + m.getUserName() + ", " + m.getAge());
 //      }
-      String query1 = "select distinct t From Teem t join fetch t.members";
-      List<Teem> result = em.createQuery(query1, Teem.class).getResultList();
+      String query1 = "select t From Teem t";
+      List<Teem> result = em.createQuery(query1, Teem.class)
+          .setFirstResult(0)
+          .setMaxResults(2)
+          .getResultList();
 
       for(Teem teem : result) {
         System.out.println("Teem = " + teem.getName() + "| members= " + teem.getMembers().size());
