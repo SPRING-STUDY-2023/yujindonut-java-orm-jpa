@@ -14,8 +14,6 @@ public class Delivery extends Base {
   @Id @GeneratedValue
   private long id;
 
-  private String city;
-
   @Embedded
   private Address address;
 

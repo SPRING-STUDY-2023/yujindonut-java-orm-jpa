@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f23ce4d-eb93-40b4-9ba5-5b8e927f43a6" name="변경" comment="# &lt;type&gt;: &lt;subject&gt;&#10;##### Subject 50 characters ################# -&gt; |&#10;&#10;&#10;# Body Message&#10;######## Body 72 characters ####################################### -&gt; |&#10;&#10;# Issue Tracker Number or URL&#10;&#10;# --- COMMIT END ---&#10;# Type can be&#10;#   feat    : new feature&#10;#   fix     : bug fix&#10;#   refactor: refactoring production code&#10;#   style   : formatting, missing semi colons, etc; no code change&#10;#   docs    : changes to documentation&#10;#   test    : adding or refactoring tests&#10;#             no productin code change&#10;#   chore   : updating grunt tasks etc&#10;#             no production code change&#10;# ------------------&#10;# Remember me ~&#10;#   Capitalize the subject line&#10;#     제목줄은 대문자로 시작한다.&#10;#   Use the imperative mood in the subject line&#10;#     제목줄은 명령어로 작성한다.&#10;#   Do not end the subject line with a period&#10;#     제목줄은 마침표로 끝내지 않는다.&#10;#   Separate subject from body with a blank line&#10;#     본문과 제목에는 빈줄을 넣어서 구분한다.&#10;#   Use the body to explain what and why vs. how&#10;#     본문에는 &quot;어떻게&quot; 보다는 &quot;왜&quot;와 &quot;무엇을&quot; 설명한다.&#10;#   Can use multiple lines with &quot;-&quot; for bullet points in body&#10;#     본문에 목록을 나타낼때는 &quot;-&quot;로 시작한다.&#10;# ------------------">
+    <list default="true" id="9f23ce4d-eb93-40b4-9ba5-5b8e927f43a6" name="변경" comment="[FEAT] Named 쿼리">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ex1/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ex1/Address.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ex1/JpaMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ex1/JpaMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ex1/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ex1/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpql/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpql/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +16,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -30,9 +28,6 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="JpbToolWindowState">
-    <option name="isToolWindowVisible" value="false" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -53,7 +48,6 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/han-yujin/Library/Mobile Documents/com~apple~CloudDocs/yujindonut-java-orm-jpa/jpa-basic&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -97,6 +91,10 @@
       <workItem from="1675823333002" duration="4423000" />
       <workItem from="1675918773642" duration="3298000" />
       <workItem from="1675941504586" duration="1170000" />
+      <workItem from="1676025479026" duration="599000" />
+      <workItem from="1676248399508" duration="4318000" />
+      <workItem from="1676336735426" duration="3108000" />
+      <workItem from="1676340739029" duration="5141000" />
     </task>
     <task id="LOCAL-00001" summary="[INIT] 프로젝트 초기셋팅 설정">
       <created>1675233360315</created>
@@ -245,7 +243,91 @@
       <option name="project" value="LOCAL" />
       <updated>1675939683008</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="[FEAT] 초기설정">
+      <created>1675961101248</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1675961101248</updated>
+    </task>
+    <task id="LOCAL-00023" summary="[FEAT] 기본문법과 쿼리 API">
+      <created>1675962053995</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1675962053995</updated>
+    </task>
+    <task id="LOCAL-00024" summary="[FEAT] 프로젝션 (Select)">
+      <created>1675962856119</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1675962856119</updated>
+    </task>
+    <task id="LOCAL-00025" summary="[FEAT] 페이징">
+      <created>1676254076865</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1676254076865</updated>
+    </task>
+    <task id="LOCAL-00026" summary="[FEAT] JOIN">
+      <created>1676255111616</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1676255111616</updated>
+    </task>
+    <task id="LOCAL-00027" summary="[FEAT] JPQL 타입 표현과 기타식">
+      <created>1676256898708</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1676256898708</updated>
+    </task>
+    <task id="LOCAL-00028" summary="[FEAT] 조건식">
+      <created>1676257363774</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1676257363774</updated>
+    </task>
+    <task id="LOCAL-00029" summary="[FEAT] 경로표현식">
+      <created>1676339744846</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1676339744846</updated>
+    </task>
+    <task id="LOCAL-00030" summary="[FEAT] 패치조인">
+      <created>1676341410040</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1676341410040</updated>
+    </task>
+    <task id="LOCAL-00031" summary="[FEAT] 페치조인의 특징과 한계">
+      <created>1676348949582</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1676348949582</updated>
+    </task>
+    <task id="LOCAL-00032" summary="[FEAT] 엔티티 직접 사용">
+      <created>1676349535645</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1676349535645</updated>
+    </task>
+    <task id="LOCAL-00033" summary="[FEAT] Named 쿼리">
+      <created>1676350344926</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1676350344926</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,14 +345,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[INIT] 프로젝트 초기셋팅 설정" />
-    <MESSAGE value="[ADD] EntityManager를 이용한 CRUD 실습" />
-    <MESSAGE value="[FEAT] Entitiy 매핑" />
-    <MESSAGE value="[FEAT] 기본키 매핑" />
-    <MESSAGE value="[FEAT] Section 4 - 엔티티매핑&#10;Section 4 - 엔티티매핑을 듣고 정리합니다." />
-    <MESSAGE value="[FEAT] 객체지향적이지 않은 설계 예시" />
-    <MESSAGE value="[FEAT] 단방향 연관관계 - ManyToOne" />
-    <MESSAGE value="[FEAT] 단방향 연관관계" />
     <MESSAGE value="[FEAT] 양방향 설계" />
     <MESSAGE value="[FEAT] 실전예제2 - 연관관계 매핑 시작" />
     <MESSAGE value="[FEAT] 다양한 연관관계 매핑 - 실전예제3" />
@@ -284,6 +358,18 @@
     <MESSAGE value="[FEAT] 실전예제5 -연관관계관리" />
     <MESSAGE value="[FEAT] 임베디드 타입" />
     <MESSAGE value="[FEAT] 값 불변객체" />
-    <option name="LAST_COMMIT_MESSAGE" value="[FEAT] 값 불변객체" />
+    <MESSAGE value="[FEAT] 초기설정" />
+    <MESSAGE value="[FEAT] 기본문법과 쿼리 API" />
+    <MESSAGE value="[FEAT] 프로젝션 (Select)" />
+    <MESSAGE value="[FEAT] 페이징" />
+    <MESSAGE value="[FEAT] JOIN" />
+    <MESSAGE value="[FEAT] JPQL 타입 표현과 기타식" />
+    <MESSAGE value="[FEAT] 조건식" />
+    <MESSAGE value="[FEAT] 경로표현식" />
+    <MESSAGE value="[FEAT] 패치조인" />
+    <MESSAGE value="[FEAT] 페치조인의 특징과 한계" />
+    <MESSAGE value="[FEAT] 엔티티 직접 사용" />
+    <MESSAGE value="[FEAT] Named 쿼리" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FEAT] Named 쿼리" />
   </component>
 </project>
